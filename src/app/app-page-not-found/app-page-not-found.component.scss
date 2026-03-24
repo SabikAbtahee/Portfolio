@@ -1,0 +1,21 @@
+// Add subtle animations
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+:host {
+	display: block;
+	animation: fade-in 0.5s ease-in;
+}
+
+// Add floating animation to the emoji
+div[class*='text-8xl'] {
+	animation: float 3s ease-in-out infinite;
+}
