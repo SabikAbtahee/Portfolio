@@ -1,7 +1,6 @@
 import { provideHttpClient } from '@angular/common/http';
 import {
     ApplicationConfig,
-    provideAppInitializer,
     provideZonelessChangeDetection
 } from '@angular/core';
 import {
@@ -10,7 +9,11 @@ import {
     withComponentInputBinding
 } from '@angular/router';
 
-import { AppTitleStrategyService, BreakPointDetectorService, ScreenSizeObserver } from '../shared';
+import {
+    AppTitleStrategyService,
+    BreakPointDetectorService,
+    ScreenSizeObserver
+} from '../shared';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -18,11 +21,6 @@ export const appConfig: ApplicationConfig = {
 		provideRouter(routes, withComponentInputBinding()),
 		provideHttpClient(),
 		provideZonelessChangeDetection(),
-		provideAppInitializer(() => {
-			console.log(
-				'Loads Before app bootstraps and blocks bootstrap until work is done'
-			);
-		}),
 		{ provide: TitleStrategy, useClass: AppTitleStrategyService },
 		{ provide: ScreenSizeObserver, useClass: BreakPointDetectorService }
 	]

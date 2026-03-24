@@ -77,25 +77,4 @@ export class BreakPointDetectorService implements IScreenSizeObserver {
 		})),
 		shareReplay(1)
 	);
-
-	// Zone changeDetection Implementation
-	//     readonly screenSize$: Observable<any> = this.createScreenSize$();
-
-	//   private createScreenSize$(): Observable<any> {
-	//     const resize$ = new Subject<Event>();
-
-	//     this.zone.runOutsideAngular(() => {
-	//       window.addEventListener('resize', (e) => resize$.next(e));
-	//     });
-
-	//     return resize$.pipe(
-	//       throttleTime(500),
-	//       startWith(null),
-	//       map(() => ({
-	//         width: window.innerWidth,
-	//         height: window.innerHeight,
-	//       })),
-	//       shareReplay(1),
-	//     );
-	//   }
 }
