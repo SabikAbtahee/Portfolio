@@ -1,21 +1,157 @@
-// Add subtle animations
-@keyframes float {
+@keyframes not-found-float {
 	0%,
 	100% {
 		transform: translateY(0);
 	}
 
 	50% {
-		transform: translateY(-20px);
+		transform: translateY(-12px);
+	}
+}
+
+@keyframes not-found-fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }
 
 :host {
 	display: block;
-	animation: fade-in 0.5s ease-in;
+	animation: not-found-fade-in 0.5s ease-in;
 }
 
-// Add floating animation to the emoji
-div[class*='text-8xl'] {
-	animation: float 3s ease-in-out infinite;
+.not-found {
+	display: flex;
+	min-height: 80vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	text-align: center;
+}
+
+.not-found-code-wrap {
+	margin-bottom: 2rem;
+}
+
+.not-found-code {
+	margin: 0;
+	font-size: clamp(4rem, 15vw, 8rem);
+	font-weight: 800;
+	line-height: 1;
+	background: linear-gradient(
+		90deg,
+		var(--mat-sys-primary) 0%,
+		var(--mat-sys-tertiary) 100%
+	);
+	background-clip: text;
+	color: transparent;
+}
+
+.not-found-icon {
+	margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+	font-size: clamp(3rem, 10vw, 5rem);
+	animation: not-found-float 3s ease-in-out infinite;
+}
+
+.not-found-heading {
+	margin: 0 0 1rem;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--mat-sys-on-surface);
+}
+
+.not-found-message {
+	margin: 0 0 2rem;
+	max-width: 28rem;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	color: var(--mat-sys-on-surface-variant);
+}
+
+.not-found-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.not-found-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.not-found-btn-primary {
+	color: var(--mat-sys-on-primary);
+	background: linear-gradient(
+		90deg,
+		var(--mat-sys-primary) 0%,
+		var(--mat-sys-tertiary) 100%
+	);
+	box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
+}
+
+.not-found-btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgb(0 0 0 / 18%);
+}
+
+.not-found-btn-secondary {
+	color: var(--mat-sys-on-surface-variant);
+	background-color: color-mix(
+		in srgb,
+		var(--mat-sys-on-surface) 8%,
+		transparent
+	);
+}
+
+.not-found-btn-secondary:hover {
+	background-color: color-mix(
+		in srgb,
+		var(--mat-sys-on-surface) 14%,
+		transparent
+	);
+}
+
+.not-found-hints {
+	margin-top: 3rem;
+	font-size: 0.875rem;
+	color: var(--mat-sys-outline);
+}
+
+.not-found-hints-title {
+	margin: 0 0 0.5rem;
+}
+
+.not-found-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.not-found-link {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.not-found-link:hover {
+	color: var(--mat-sys-primary);
 }

@@ -40,8 +40,6 @@
     "peacock.color": "#DAF7A6",
     "css.validate": false,
     "less.validate": false,
-    "tailwindCSS.experimental.configFile": ".postcssrc.json",
-
     "workbench.tree.indent": 24,
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -327,11 +325,6 @@
     "htmlhint.documentSelector": ["html", "htm"],
     "eslint.run": "onSave",
     "editor.unfoldOnClickAfterEndOfLine": true,
-    "tailwindCSS.includeLanguages": {
-        "html": "html",
-        "javascript": "javascript",
-        "css": "css"
-    },
     "workbench.productIconTheme": "Default",
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
