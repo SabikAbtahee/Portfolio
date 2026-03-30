@@ -44,13 +44,17 @@
 						],
 						"styles": [
 							"src/styles/styles.scss",
-							"src/styles/colors.scss",
 							"src/styles/fonts.scss",
 							"src/styles/icons.scss",
 							"src/styles/variables.scss",
 							"src/styles/animations.scss"
 						],
-						"scripts": []
+						"scripts": [],
+						"stylePreprocessorOptions": {
+							"includePaths": [
+								"src/styles"
+							]
+						}
 					},
 					"configurations": {
 						"production": {
@@ -131,7 +135,9 @@
 		"@schematics/angular:guard": {
 			"typeSeparator": ".",
 			"functional": false,
-			"implements": ["CanActivate"]
+			"implements": [
+				"CanActivate"
+			]
 		},
 		"@schematics/angular:interceptor": {
 			"typeSeparator": ".",

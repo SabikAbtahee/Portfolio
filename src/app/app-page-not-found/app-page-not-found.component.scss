@@ -45,8 +45,8 @@
 	line-height: 1;
 	background: linear-gradient(
 		90deg,
-		var(--mat-sys-primary) 0%,
-		var(--mat-sys-tertiary) 100%
+		var(--app-gradient-start) 0%,
+		var(--app-gradient-end) 100%
 	);
 	background-clip: text;
 	color: transparent;
@@ -63,7 +63,7 @@
 	margin: 0 0 1rem;
 	font-size: 1.75rem;
 	font-weight: 700;
-	color: var(--mat-sys-on-surface);
+	color: var(--app-on-surface);
 }
 
 .not-found-message {
@@ -71,7 +71,7 @@
 	max-width: 28rem;
 	font-size: 1.125rem;
 	line-height: 1.5;
-	color: var(--mat-sys-on-surface-variant);
+	color: var(--app-on-surface-muted);
 }
 
 .not-found-actions {
@@ -99,11 +99,11 @@
 }
 
 .not-found-btn-primary {
-	color: var(--mat-sys-on-primary);
+	color: var(--app-on-accent);
 	background: linear-gradient(
 		90deg,
-		var(--mat-sys-primary) 0%,
-		var(--mat-sys-tertiary) 100%
+		var(--app-gradient-start) 0%,
+		var(--app-gradient-end) 100%
 	);
 	box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
 }
@@ -114,10 +114,10 @@
 }
 
 .not-found-btn-secondary {
-	color: var(--mat-sys-on-surface-variant);
+	color: var(--app-on-surface-muted);
 	background-color: color-mix(
 		in srgb,
-		var(--mat-sys-on-surface) 8%,
+		var(--app-on-surface) 8%,
 		transparent
 	);
 }
@@ -125,7 +125,7 @@
 .not-found-btn-secondary:hover {
 	background-color: color-mix(
 		in srgb,
-		var(--mat-sys-on-surface) 14%,
+		var(--app-on-surface) 14%,
 		transparent
 	);
 }
@@ -133,7 +133,7 @@
 .not-found-hints {
 	margin-top: 3rem;
 	font-size: 0.875rem;
-	color: var(--mat-sys-outline);
+	color: var(--app-border-strong);
 }
 
 .not-found-hints-title {
@@ -153,5 +153,5 @@
 }
 
 .not-found-link:hover {
-	color: var(--mat-sys-primary);
+	color: var(--app-accent);
 }
